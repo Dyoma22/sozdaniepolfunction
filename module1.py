@@ -69,21 +69,18 @@ def kuupaev(kuu):
 			print("Kehtetu kuu!")
 		return kuu#4
 def bank(a, years):
-	"""Kasutaja teeb n-rublase sissemakse aastateks 10% aastas
-	(iga aastaga suureneb tema panuse suurus 10%).
-	Igal aastal teatab kasutaja pangale miljoni rubla suuruse summa.
-	(See raha lisatakse sissemakse summale ja nende jaoks järgmisel aastal
-	on samuti protsent)
-	Kirjutage pangafunktsioon, mis võtab argumentidena n, m ja aastad ning tagastab summa,
-	mis jääb kasutaja kontole.
-	"""
+    #Paneme raha saldole ja ootame n arv aastaid   :param float a:Esimene arv   :param float years: Teine arv  	:rtype float
+	
 	for _ in range(years):
 		a=((1.1*1/100)*a)*100
 		print("Ваш баланс:",a)
-		return("")#5
+		return a,years
 def is_prime(b):
 	"""Kirjutage funktsioon is_prime, mis võtab 1 argumendi, arvu vahemikus 0 kuni
-    1000 ja tagastab tõene, kui see on algarvuga, ja False muul juhul.
+    1000 ja tagastab tõene, kui see on algarvuga, ja False muul juhul. 
+	:param int 
+	a:Esimene arv 
+	:rtype str
 	"""
 	k=2
 	while k*k<=b:
@@ -93,6 +90,8 @@ def is_prime(b):
 	return True#6
 def xor_cipher(string:str, key:str)->str:
     """Tavaline sõna kodeeristakse.
+	:param str string: Esimene arv
+    :param str key: Teine arv
     """
     result=""
     temp=int()
@@ -104,6 +103,8 @@ def xor_cipher(string:str, key:str)->str:
     return result#7
 def xor_uncipher(string:str, key: str)->str:
     """Koderiumine text dekodeeritakse.
+	:param str string: Esimene arv
+    :param str key: Teine arv
     """
     result = ""
     temp = []
@@ -114,7 +115,7 @@ def xor_uncipher(string:str, key: str)->str:
         result += temp[i]
     return result#7.1
 def date(day:int, month:int,year:int):
-	#Kirjutage funktsiooni kuupäev, millel on 3 argumenti – päev, kuu ja aasta. Tagasta True, kui selline kuupäev on meie kalendris olemas, ja False muul juhul.	
+	#Kirjutage funktsiooni kuupäev, millel on 3 argumenti – päev, kuu ja aasta. Tagasta True, kui selline kuupäev on meie kalendris olemas, ja False muul juhul. :param int day: Esimene arv :param int month: Teine arv :param int year: Kolmas arv	
     set_months = {1: 31,2: 28, 3: 31,4: 30,5: 31,6: 30,7: 31,8: 31,9: 30,10: 31,11: 30,12: 31}
     if year>0 and (month>=1 and month<=12):
         if day in range(1, set_months[month]+1):
