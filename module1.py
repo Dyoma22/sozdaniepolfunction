@@ -26,8 +26,7 @@ def arithmetic(a: float,b:float,c:str):
 	else:
 		print("Viga")
 		r=0.0
-	return r 			
-
+	return r#1	
 def is_year_leap(aasta: int):
 	"""Liigaasta leidmine
 	Tagastab True kui aasta on liigaasta ja False kui ei ole
@@ -38,8 +37,7 @@ def is_year_leap(aasta: int):
 		vastus=True
 	else:
 		vastus=False
-	return vastus
-
+	return vastus#2
 def square(a):
 	"""Ruudu külg
 	Annab vastust ruudu pindala,diogonaal,ümbermööt
@@ -52,8 +50,7 @@ def square(a):
 	d=d**0.5
 	
 	r = (p, s, d)
-	return r
-
+	return r#3
 def kuupaev(kuu):
 	"""Aasta kuu
 	programm küsib kuu päeva 1-12, et teada saada, mis kuu
@@ -70,31 +67,55 @@ def kuupaev(kuu):
 		print("Sügis")
 	else:
 		print("Kehtetu kuu!")
-	return kuu
-
-def bank(raha,aasta):
+	return kuu#4
+def bank(a, years):
 	"""Kasutaja teeb n-rublase sissemakse aastateks 10% aastas
 	(iga aastaga suureneb tema panuse suurus 10%).
 	Igal aastal teatab kasutaja pangale miljoni rubla suuruse summa.
 	(See raha lisatakse sissemakse summale ja nende jaoks järgmisel aastal
 	on samuti protsent)
-
 	Kirjutage pangafunktsioon, mis võtab argumentidena n, m ja aastad ning tagastab summa,
 	mis jääb kasutaja kontole.
 	"""
-	raha=a
-	aasta=b
-	def money():
-		if aasta>0:
-			raha=a*1,1+c
-			aasta=aasta-1
-			return money()
-		else:
-			return raha
-
-
-
-
-
-
-
+	for _ in range(years):
+		a=((1.1*1/100)*a)*100
+		print("Ваш баланс:",a)
+		return("")#5
+def is_prime(b):
+	k=2
+	while k*k<=b:
+		if b%k==0:
+			return False
+		k+=1
+	return True#6
+def xor_cipher(string:str, key:str)->str:
+    """Tavaline sõna kodeeristakse
+    """
+    result=""
+    temp=int()
+    for i in range(len(string)):
+        temp=ord(string[i])
+        for j in range(len(key)):
+            temp^=ord(key[j])
+        result+=chr(temp)
+    return result#7
+def xor_uncipher(string:str, key: str)->str:
+    """Koderiumine text dekodeeritakse
+    """
+    result = ""
+    temp = []
+    for i in range(len(string)):
+        temp.append(string[i])
+        for j in reversed(range(len(key))):
+            temp[i] = chr(ord(key[j]) ^ ord(temp[i]))
+        result += temp[i]
+    return result#7.1
+def date(day:int, month:int, year:int):
+    set_months = {1: 31,2: 28, 3: 31,4: 30,5: 31,6: 30,7: 31,8: 31,9: 30,10: 31,11: 30,12: 31}
+    if year>0 and (month>=1 and month<=12):
+        if day in range(1, set_months[month]+1):
+           return True
+        else:
+            return False
+    else:
+        return False#8

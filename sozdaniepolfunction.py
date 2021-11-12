@@ -5,7 +5,7 @@ from math import *
 
 while True:
 	print("Funktsioonid".center(50,"+"))
-	print("arithmetic - A,\nis_year_leap - Y,\nsquare - S,\nkuupaev - L,\nbank - M")
+	print("arithmetic - A,\nis_year_leap - Y,\nsquare - S,\nkuupaev - L,\nbank - M,\nxor_cipher - X,\nis_prime - N")
 	v=input()
 	print()
 	if v.upper()=="A":
@@ -24,6 +24,18 @@ while True:
 		rezult=kuupaev(int(input("Kirjutage kuu päev (1-12) - ")))
 		print(rezult)
 	elif v.upper()=="M":
-		rezult=bank(int(input("Kui palju raha soovite laenata? - ")))
+		a=float(input("Sisestage sissemakse summa: "))
+		years=int(input("Mitu aastat on möödunud?"))
+		rezult=bank(a,years)
+		print(rezult)	
+	elif v.upper()=="X":
+		print("Kodeerimine".center(60,"*"))
+		result=xor_cipher(input("Sisesta tekst - "), input("Sisesta võti - "))
+		print(result)
+		print("Dekodeerimine". center(60,"*"))
+		de_rezult=xor_uncipher(result, input("Sisesta võti:"))
+		print(de_rezult)
+	elif v.upper()=="N":
+		rezult=is_prime(int(input("Kirjutage arv (1 - 1000) - ")))
 		print(rezult)
 	
