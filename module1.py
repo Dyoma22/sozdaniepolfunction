@@ -21,21 +21,21 @@ def arithmetic(a: float,b:float,c:str):
 		if b!=0:
 			r=a/b
 		else:
-			print("Div0")			
+			r=("Div0")			
 	else:
 		r="Tundmatu sym"
 	return r#1	
-def is_year_leap(aasta:int):
+def is_year_leap(aasta:int)->bool:
 	"""Liigaasta leidmine
 	Tagastab True kui aasta on liigaasta ja False kui ei ole
 	:param int aasta: Aasta number
 	:rtype bool: Funktsioni vastus logilises formaadis
 	"""
 	if aasta%4==0:
-		vastus=True
+		r=True		
 	else:
-		vastus=False
-	return vastus#2
+		r=False		
+	return r #2
 def square(a):
 	"""Ruudu külg
 	Annab vastust ruudu pindala,diogonaal,ümbermööt
@@ -47,7 +47,7 @@ def square(a):
 	d=(a**2)/2
 	d=d**0.5
 	
-	r = (p, s, d)
+	rez=(p, s, d)
 	return r#3
 def kuupaev(kuu):
 	"""Aasta kuu
@@ -57,15 +57,15 @@ def kuupaev(kuu):
 	"""
 	while type(kuu)!=int or kuu<0 or kuu<13:
 		if kuu==12 or 1<=kuu<=2: 
-			print("Talv")
+			rez=("Talv")
 		elif 3<=kuu<=5:
-			print("Kevad")
+			rez=("Kevad")
 		elif 6<=kuu<=8:
-			print("Suvi")
+			rez=("Suvi")
 		elif 9<=kuu<=11:
-			print("Sügis")
+			rez=("Sügis")
 		else:
-			print("Kehtetu kuu!")
+			rez=("Kehtetu kuu!")
 		return kuu#4
 def bank(a, years):
     #Paneme raha saldole ja ootame n arv aastaid   :param float a:Esimene arv   :param float years: Teine arv  	:rtype float
