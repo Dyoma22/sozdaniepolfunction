@@ -21,8 +21,7 @@ def arithmetic(a: float,b:float,c:str):
 		if b!=0:
 			r=a/b
 		else:
-			print("Div0")
-			r=0.0
+			print("Div0")			
 	else:
 		r="Tundmatu sym"
 	return r#1	
