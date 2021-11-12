@@ -27,7 +27,7 @@ def arithmetic(a: float,b:float,c:str):
 		print("Viga")
 		r=0.0
 	return r#1	
-def is_year_leap(aasta: int):
+def is_year_leap(aasta:int):
 	"""Liigaasta leidmine
 	Tagastab True kui aasta on liigaasta ja False kui ei ole
 	:param int aasta: Aasta number
@@ -82,6 +82,9 @@ def bank(a, years):
 		print("Ваш баланс:",a)
 		return("")#5
 def is_prime(b):
+	"""Kirjutage funktsioon is_prime, mis võtab 1 argumendi, arvu vahemikus 0 kuni
+    1000 ja tagastab tõene, kui see on algarvuga, ja False muul juhul.
+	"""
 	k=2
 	while k*k<=b:
 		if b%k==0:
@@ -89,7 +92,7 @@ def is_prime(b):
 		k+=1
 	return True#6
 def xor_cipher(string:str, key:str)->str:
-    """Tavaline sõna kodeeristakse
+    """Tavaline sõna kodeeristakse.
     """
     result=""
     temp=int()
@@ -100,7 +103,7 @@ def xor_cipher(string:str, key:str)->str:
         result+=chr(temp)
     return result#7
 def xor_uncipher(string:str, key: str)->str:
-    """Koderiumine text dekodeeritakse
+    """Koderiumine text dekodeeritakse.
     """
     result = ""
     temp = []
@@ -110,7 +113,8 @@ def xor_uncipher(string:str, key: str)->str:
             temp[i] = chr(ord(key[j]) ^ ord(temp[i]))
         result += temp[i]
     return result#7.1
-def date(day:int, month:int, year:int):
+def date(day:int, month:int,year:int):
+	#Kirjutage funktsiooni kuupäev, millel on 3 argumenti – päev, kuu ja aasta. Tagasta True, kui selline kuupäev on meie kalendris olemas, ja False muul juhul.	
     set_months = {1: 31,2: 28, 3: 31,4: 30,5: 31,6: 30,7: 31,8: 31,9: 30,10: 31,11: 30,12: 31}
     if year>0 and (month>=1 and month<=12):
         if day in range(1, set_months[month]+1):
