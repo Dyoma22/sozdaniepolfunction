@@ -37,8 +37,7 @@ while True:
 		print(de_rezult)
 	elif v.upper()=="N":
 		rezult=is_prime(int(input("Kirjutage arv (1 - 1000) - ")))
-		print(rezult)
-	
+		print(rezult)	
 	elif v.upper()=="G":
 		day=int(input("Sisestage päev: "))
 		month=int(input("Sisestage kuu: "))
