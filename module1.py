@@ -56,17 +56,18 @@ def kuupaev(kuu):
 	:param int kuu:Kuu
 	:rtype bool:
 	"""
-	if kuu==12 or 1<=kuu<=2: 
-		print("Talv")
-	elif 3<=kuu<=5:
-		print("Kevad")
-	elif 6<=kuu<=8:
-		print("Suvi")
-	elif 9<=kuu<=11:
-		print("Sügis")
-	else:
-		print("Kehtetu kuu!")
-	return kuu#4
+	while type(kuu)!=int or kuu<0 or kuu<13:
+		if kuu==12 or 1<=kuu<=2: 
+			print("Talv")
+		elif 3<=kuu<=5:
+			print("Kevad")
+		elif 6<=kuu<=8:
+			print("Suvi")
+		elif 9<=kuu<=11:
+			print("Sügis")
+		else:
+			print("Kehtetu kuu!")
+		return kuu#4
 def bank(a, years):
 	"""Kasutaja teeb n-rublase sissemakse aastateks 10% aastas
 	(iga aastaga suureneb tema panuse suurus 10%).
