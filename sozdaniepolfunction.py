@@ -39,3 +39,9 @@ while True:
 		rezult=is_prime(int(input("Kirjutage arv (1 - 1000) - ")))
 		print(rezult)
 	
+	elif v.upper()=="G":
+		day=int(input("Sisestage päev: "))
+		month=int(input("Sisestage kuu: "))
+		year=int(input("Sisestage aasta: "))
+		result=date(day,month,year)
+		print(result)

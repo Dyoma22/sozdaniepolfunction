@@ -24,8 +24,7 @@ def arithmetic(a: float,b:float,c:str):
 			print("Div0")
 			r=0.0
 	else:
-		print("Viga")
-		r=0.0
+		r="Tundmatu sym"
 	return r#1	
 def is_year_leap(aasta:int):
 	"""Liigaasta leidmine
@@ -57,7 +56,7 @@ def kuupaev(kuu):
 	:param int kuu:Kuu
 	:rtype bool:
 	"""
-	if kuu==12 or 1<=kuu<=2:
+	if kuu==12 or 1<=kuu<=2: 
 		print("Talv")
 	elif 3<=kuu<=5:
 		print("Kevad")
